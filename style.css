@@ -1,0 +1,215 @@
+/*
+Theme Name: Matthew Theme #711
+
+
+*/
+
+.wrapper {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.article-content {
+  width: 90%;
+
+  margin: 0 auto;
+}
+
+.utility-img {
+  width: 128px;
+  height: 128px;
+  margin: 0 auto 15px;
+  padding-top: 0.5em;
+}
+
+.utility-border {
+  background: #faebd7;
+}
+
+.utility-border:nth-child(2) {
+  background: #7fffd4;
+}
+
+.utility-border:last-child {
+  background: #f0f8ff;
+}
+
+.utility-section {
+  padding-top: 2em;
+  margin: 0 auto;
+}
+
+.utility-margin {
+  margin-top: 25px;
+}
+
+.category {
+  line-height: 1px;
+  font-weight: bold;
+}
+
+.utility-hr {
+  margin-top: 10px;
+  display: block;
+  height: 1px;
+  border-top: 0.1px solid blue;
+  padding: 0;
+}
+
+.utility-block-hr {
+  margin-top: 10px;
+  display: block;
+  height: 1px;
+  border-top: 20px solid #191919;
+  padding: 0;
+}
+
+.utility-block-hr-bottom {
+  margin-top: 10px;
+  display: block;
+  height: 1px;
+  border-top: 1px solid #191919;
+  padding: 0;
+}
+
+.utility-text {
+  margin-bottom: 10px;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.utility-logo-image {
+  width: 256px;
+  height: 256px;
+}
+
+.yellow-highlight {
+  background: #f8fbfe; /* Default color, all browsers */
+}
+
+.yellow-highlight:hover {
+  background: #a4c7ec; /* Default color, all browsers */
+}
+
+.utility-headline {
+  font-weight: bold;
+  font-size: 1.25em;
+  font-style: italic;
+  word-wrap: break-word;
+  color: black;
+}
+
+.utility-flex {
+  display: flex;
+  width: 97%;
+  padding: 0.6em;
+  margin-left: 0.6em;
+}
+
+@media screen and (max-width: 768px) {
+  .utility-flex {
+    flex-direction: column;
+    margin-left: 0px;
+    width: 100%;
+  }
+}
+
+.utility-logo-actual {
+  width: 100%;
+}
+
+.total-ratings {
+  clear: left;
+  font-size: 0.8rem;
+}
+
+.average-rating {
+  bottom: 35px;
+  position: absolute;
+}
+
+fieldset,
+label {
+  margin: 0;
+  padding: 0;
+}
+
+.rating {
+  border: none;
+  float: left;
+}
+
+.rating > input {
+  display: none;
+}
+.rating > label:before {
+  margin: 5px;
+  font-size: 1.25em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+
+.spinner {
+  margin: 5px;
+  font-size: 1.25em;
+  font-family: FontAwesome;
+  display: none;
+  animation: spin infinite 2s linear;
+}
+
+.spinner:before {
+  content: "\f1ce";
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.logged-in .rating > label:before {
+  cursor: pointer;
+}
+
+.rating > label {
+  color: #ddd;
+  float: right;
+}
+
+.logged-in .tooltip {
+  display: none;
+}
+
+.tooltip-inner {
+  background-color: #00acd6 !important;
+  color: #fff;
+}
+
+
+
+.rating > input:checked ~ label, /* show gold star when clicked */
+.logged-in .rating:not(:checked) > label:hover, /* hover current star */
+.logged-in .rating:not(:checked) > label:hover ~ label {
+  color: #ffd700;
+} /* hover previous stars in list */
+
+.logged-in .rating > input:checked + label:hover, /* hover current star when changing rating */
+.logged-in .rating > input:checked ~ label:hover,
+.logged-in .rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+.logged-in .rating > input:checked ~ label:hover ~ label {
+  color: #ffed85;
+}
+
+a {
+  text-decoration: none;
+  color: black !important;
+}
+
+a:hover {
+  text-decoration: none;
+  color: black !important;
+}
